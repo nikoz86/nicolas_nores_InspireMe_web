@@ -1,0 +1,93 @@
+.maingrid{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    
+    
+    .contactinfo{
+        justify-self: flex-start;
+        display: grid;
+        grid-template-rows: 2fr 1fr 0.5fr 5fr;
+        justify-items: center;
+        max-width: $screen-medium;
+        margin: auto;
+
+        h1{
+            grid-row: 1 / 2;
+        }
+
+        h2{
+            grid-row: 2 / 3;
+         }
+
+        p{
+            grid-row: 3 / 4;
+        }
+
+    }
+
+    .form{
+        display: grid;
+        grid-template-rows: 0.5fr 0.5fr 2fr;
+        justify-items: center;
+        align-items: center;
+        max-width: $screen-medium;
+        margin: auto;
+
+
+        h2{
+            padding-top: $spacing-xxl;
+            font-size: $font-lg;
+        }
+
+        form{
+            display: grid;
+            width: 500px;
+            padding-bottom: $spacing-xxxl;
+
+            .feedback-input {
+                color:white;
+                font-family: Helvetica, Arial, sans-serif;
+                font-weight:500;
+                font-size: 18px;
+                border-radius: 5px;
+                line-height: 22px;
+                background-color: transparent;
+                border:2px solid $clr-purple-dark;
+                transition: all 0.3s;
+                padding: 13px;
+                margin-bottom: 15px;
+                width:100%;
+                box-sizing: border-box;
+                outline:0;
+              }
+
+                &:focus { border:2px solid #CC4949; }
+
+              textarea {
+                height: 150px;
+                line-height: 150%;
+                resize:vertical;
+              }
+
+              [type="submit"] {
+                font-family: 'Montserrat';
+                width: 100%;
+                background:$clr-purple-dark;
+                border-radius:5px;
+                border:0;
+                cursor:pointer;
+                color:white;
+                font-size:24px;
+                padding-top:10px;
+                padding-bottom:10px;
+                transition: all 0.3s;
+                margin-top:-4px;
+                font-weight:700;
+              }
+
+              [type="submit"]:hover { 
+                  background:#CC4949; 
+            }
+        }
+    }
+}

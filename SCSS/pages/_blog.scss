@@ -1,0 +1,22 @@
+.error{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 4.2rem;
+
+    h1{
+        font-size: 4.6em;
+        text-align: right;
+        width: 24rem;
+        align-self: center;
+
+    }
+
+    &__image{
+        height: 66vh;
+
+        img{
+            height:73vh;
+            justify-self: center;
+        }
+    }
+}

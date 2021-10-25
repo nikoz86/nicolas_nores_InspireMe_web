@@ -1,0 +1,215 @@
+/* SUCCESS STORY */
+.main-grid{
+    display: grid;
+    justify-items: center;
+    margin: auto;
+
+    &__top{
+        display: grid;
+        justify-items: center;
+
+        &__title{
+            padding-top: $spacing-xxl;
+            display: grid;
+            justify-items: center;
+
+            h3{
+                color: $clr-hilight;
+            }
+
+            h1{
+                font-size: 4em;
+                padding-bottom: $spacing-xxl;
+            }
+        }
+
+        &__info{
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            padding-top: $spacing-lg;
+            width: 640px;
+
+            &__author{
+                display: grid;
+                grid-template-columns: 0.2fr 2fr;
+                
+
+                .a-photo{
+                    width: 4rem;
+                    
+                    img{
+                        width: 100%;
+                    }
+                }
+
+                .a-info{
+                    display: grid;
+                    padding: 0.7rem;
+                    
+                    &__name{
+                        overflow: hidden;
+                    }
+
+                }
+            }
+
+            &__social{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                .link{
+                    width: 2.1rem;
+                    background-size: 90%;
+                    background-position: center;
+                    margin-left: 1rem;
+                    background-repeat: no-repeat;
+                }
+                
+                .facebook{
+                    background-image: url(../../images/sm_facebook.png);
+                    
+                }
+                 .twitter{
+                    background-image: url(../../images/sm_twitter.png);
+                    
+                }
+                 .linkedin{
+                    background-image: url(../../images/sm_linkedin.png);
+                    
+                }
+            }
+        }
+
+    }
+
+    &__mid{
+        display: grid;
+        width: 40rem;
+        height: 100%;
+
+        &__question{
+            padding-top: 3rem;
+
+            h3{
+                text-transform:initial;
+            }
+
+            p{
+                line-height: 2em;
+                padding-top: 1rem;
+            }
+
+            ul{
+                list-style-type:circle;
+                padding-left: 2rem;
+                margin: 2rem;
+            }
+            
+            li{
+                margin: 1rem;
+            }
+        }
+    }
+
+    &__bot{
+
+        h2{
+            text-align: center;
+            color: dimgray;
+            margin: 3rem;
+            overflow: hidden;
+        }
+
+        &__dcard{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            .card{
+                width: 30rem;
+                display: grid;
+                margin: 1rem;
+                border-radius: $radius-md;
+                justify-items: center;
+
+                &__img-container{
+                    width: 23.9rem;
+                    margin: 0 2rem;
+                    border-radius: 0 0 $radius-md $radius-md;
+                    background-color: white;
+                    display: grid;
+                    align-items: center;
+
+                    img{
+                        margin: auto;
+                    }
+                }
+
+                a{
+                    text-decoration: underline; 
+                    color: #4A180E;
+                    font-family: montserrat;
+                    font-weight: 800;
+                    text-align: center;
+                    margin: 0 0 $spacing-xxxl;
+                }
+                a:hover{
+                    color:$clr-hilight;
+                }
+            }
+
+            .orange{
+                background-color: #C43F26;
+
+                p{
+                    padding: 2rem;
+                    text-align: center;
+                    color: whitesmoke;
+                }
+                
+            }
+
+            .purple{
+                background-color: #B46BC7;
+
+                p{
+                    padding: 2rem 2rem 1rem;
+                    text-align: center;
+                    color: whitesmoke;
+                }
+            }
+        }
+    }
+
+    &__cta{
+        display: grid;
+        height: 50vh;
+        padding: $spacing-xxxl 0 $spacing-xxxl  ;
+        justify-items: center;
+        align-items: center;
+
+        h2{
+            text-align: center;
+            padding-bottom: $spacing-xxl;
+            font-size: $font-lg;
+        }
+
+        p{
+            color: $clr-primary;
+            padding: 0 0 $spacing-xxl;
+        }
+
+        &__button {  
+            
+            a{
+                color: $white;
+                background-color:blue;
+                text-align: center;
+                padding: 1.3rem 5rem;
+                border-radius: $radius-md;
+                margin-top: 0rem;
+            }
+        }
+
+    }
+
+
+}

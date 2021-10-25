@@ -1,0 +1,175 @@
+
+/* NAVBAR */
+.navbar{
+    background-color: black;
+    text-decoration: none; 
+    font-family: Montserrat;
+    display: flex;
+    padding: $spacing-xl;
+    box-shadow: 0 0 10px $clr-gray300;
+
+    &__hamburger__toggle {
+      display: none;
+      }
+    
+      &__hamburger__checkbox {
+      display: none;
+    }
+
+
+    &__menu{
+        flex-grow: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &__item{
+            width: 13%;
+            text-align: center;
+            position: relative;
+            cursor: pointer;
+
+            &:hover ul, &:focus ul{
+                opacity: 1;
+                visibility: visible;
+            }
+
+            &::after{
+                content: "";
+                width: 0;
+                height: $spacing-ssm;
+                border-radius: $radius-md;
+                position: absolute;
+                left: $spacing-md;
+                bottom: -0.4rem;
+                background-color: $clr-secondary;
+                transition: width 200ms ease-in;
+
+            }
+
+            &:hover::after, &:focus::after{
+                width: 80%;
+            }
+
+            &__link{
+                text-decoration: none; 
+                color: whitesmoke;
+                display: inline-block;
+            }
+            .submenu{
+                position: absolute;
+                display:block;
+                background-color: $clr-primary;
+                border-radius: 0 0 $radius-md $radius-md;
+                margin-top: 0.2rem;
+                left: $spacing-md;
+                width: 12rem;
+                padding: $spacing-sm;
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 200ms ease-in-out;
+    
+                &__item{
+                    display: block;
+                    border-radius: 0 0 $radius-md $radius-md;
+                    transition: background-color 200ms ease-in-out;
+                    
+                }
+                &:hover, &:focus{
+                    background-color: $nav-hover-color;
+                    border-radius: 0 0 $radius-md $radius-md;
+                }
+            }    
+        }
+    }
+    &__logo{
+       max-height: 2.5rem;
+      margin-right: 50px;
+    }
+}
+
+@media (max-width:576px){
+  .navbar{
+    position: fixed;
+    padding: 0.5rem;
+    &__hamburger{
+      width: 100vw;
+      
+      &__checkbox {
+        display: none;
+      }
+  
+      &__toggle {
+        position: absolute;
+        display: block;
+        cursor: pointer;
+        margin: 1rem;
+        right: 1.5rem;
+    
+        svg {
+          width: 1.5rem;
+          fill: $white;
+        }
+    
+        .close {
+          display: none;
+        }
+
+        .menu {
+          margin-top: 0.2rem;
+        }
+      }
+    }
+  
+    &__menu {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      align-items: center;
+      margin: 1rem;
+      width: auto;
+  
+      li {
+        list-style: none;
+        display: none;
+        width:100%;
+      
+        &:first-child {
+          max-height: 2rem;
+          align-self: start;
+          margin-right: auto;
+          display: block;
+        }
+
+        a {
+          text-decoration: none;
+          color: $white;
+          font-size: 1.2rem;
+        }
+      }
+      .submenu{
+        visibility: visible;
+        opacity: 1;
+        position: initial;
+        width: auto;
+
+      }
+    }
+
+    
+
+    // Toggle the hamburger menu in mobile view
+    #navbar__hamburger__checkbox:checked ~ ul.navbar__menu li {
+      display: block;
+    }
+
+    //Change from menu to close icon on tap
+    #navbar__hamburger__checkbox:checked ~ label.navbar__hamburger__toggle .close {
+      display: block;
+    }
+
+    #navbar__hamburger__checkbox:checked ~ label.navbar__hamburger__toggle .menu {
+      display: none;
+    }
+  }
+}
